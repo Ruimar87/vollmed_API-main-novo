@@ -1,0 +1,22 @@
+package br.com.sistema.api.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController // Registra a classe OlaController como um controller do SpringBoot
+@RequestMapping("ola") // Define a url base para todos os métodos dessa classe
+public class OlaController {
+
+    @GetMapping("/olamundo") // Método HTTP do tipo GET
+    public String olaMundo() {
+        return "Olá Mundo !!!";
+    }
+
+}
+
+
+// localhost:8080/ -> Get
+// localhost:8080/home -> Get
+
+// localhost:8080/cadastro -> Post
